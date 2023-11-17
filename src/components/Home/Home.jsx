@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { useDispatch } from "react-redux"
 import axios from 'axios'
 import { addMovies } from "../../features/movies/movieSlice"
+import MovieList from "../movieList/MovieList"
 
 const Home = () => {
     const dispatch = useDispatch()
@@ -20,7 +21,7 @@ const Home = () => {
 
     return (
         <div className="home">
-            <h2>Home</h2>
+            <MovieList />
         </div>
     )
 }
