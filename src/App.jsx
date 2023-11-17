@@ -1,5 +1,8 @@
+import {Routes, Route} from 'react-router-dom'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
+import Home from './components/Home/Home'
+import PageNotFound from './components/PageNotFound/PageNotFound'
 import './App.css'
 
 function App() {
@@ -8,7 +11,11 @@ function App() {
     <div className='App'>
       <main>
         <Header />
-        <h1>Movies</h1>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path='home' element={<Home />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
       </main>
       <Footer />
     </div>
