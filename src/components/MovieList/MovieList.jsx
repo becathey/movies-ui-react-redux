@@ -11,7 +11,7 @@ const MovieList = () => {
 
     return (
         <>
-            <h2>Movie List</h2>
+            <h2>Top Movies</h2>
             <div className="movie-container">{renderedMovies}</div>
         </>
     )
