@@ -1,11 +1,13 @@
 /* eslint-disable react/prop-types */
+import { Link } from 'react-router-dom'
 import './MovieCard.css'
 
 const MovieCard = (props) => {
     const {data} = props
 
     return (
-        <div className="card">
+        <Link to={`/movie/${data.id}`} className='card-link'>
+            <div className="card">
             <div className="card-body">
                 <img src={data.image} className="card-image" />
                 <h2 className="card-title">{data.title}</h2>
@@ -14,7 +16,8 @@ const MovieCard = (props) => {
             <div className="card-footer">
                 <p className="card-genre">{data.genre}</p>
             </div>
-        </div>
+            </div>
+        </Link>
     )
 }
 
