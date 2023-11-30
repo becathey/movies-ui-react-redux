@@ -3,7 +3,7 @@ import axios from 'axios'
 
 export const fetchAsyncMovies = createAsyncThunk('movies/fetchAsyncMovies', async () => {
     const result = await axios(
-        'http://localhost:8000/movies/'
+        'https://movie-hub-nc0g.onrender.com/movies/'
     )
     return result.data
 })
@@ -12,7 +12,7 @@ export const fetchAsyncMovieDetail = createAsyncThunk(
     'movies/fetchAsyncMovieDetail',
     async (id) => {
         const result = await axios(
-            `http://localhost:8000/movies/${id}`
+            `https://movie-hub-nc0g.onrender.com/movies/${id}`
         )
         return result.data
     }
