@@ -30,7 +30,7 @@ const MovieDetail = () => {
                     <div className="detail-header">
                         <h2 className="detail-title">{data.title}</h2>
                         <p className="detail-director">{data.director}</p>
-                        <p className="detail-year">{data.year}</p>
+                        <p className="detail-year">{data.release_year}</p>
                     </div>
                     <p className="detail-genre">{data.genre}</p>
                     <p className="detail-description">{data.description}</p>
