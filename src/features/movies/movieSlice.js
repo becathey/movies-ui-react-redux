@@ -3,7 +3,8 @@ import axios from 'axios'
 
 export const fetchAsyncMovies = createAsyncThunk('movies/fetchAsyncMovies', async () => {
     const result = await axios(
-        'https://movie-hub-nc0g.onrender.com/movies/'
+        // 'https://movie-hub-nc0g.onrender.com/movies/',
+        'https://movies-api-aab6.up.railway.app/movies/'
     )
     return result.data
 })
@@ -12,7 +13,8 @@ export const fetchAsyncMovieDetail = createAsyncThunk(
     'movies/fetchAsyncMovieDetail',
     async (id) => {
         const result = await axios(
-            `https://movie-hub-nc0g.onrender.com/movies/${id}`
+            // `https://movie-hub-nc0g.onrender.com/movies/${id}`,
+            `https://movies-api-aab6.up.railway.app/movies/${id}`
         )
         return result.data
     }
